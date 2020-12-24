@@ -1,0 +1,6 @@
+framework module Pods_OnboardPractice_OnboardPracticeUITests {
+  umbrella header "Pods-OnboardPractice-OnboardPracticeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
