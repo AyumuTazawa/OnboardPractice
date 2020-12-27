@@ -53,7 +53,7 @@ class ViewController: UIViewController, EAIntroDelegate {
         page3.descPositionY = self.view.bounds.size.height/2
         
         let introView = EAIntroView(frame: self.view.bounds, andPages: [page1, page2, page3])
-        introView?.skipButton.setTitle("スキップ", for: UIControl.State.normal) //スキップボタン欲しいならここで実装！
+        introView?.skipButton.setTitle("スキップ", for: UIControl.State.normal)
         introView?.delegate = self
         introView?.show(in: self.view, animateDuration: 1.0)
     }
@@ -69,17 +69,11 @@ extension ViewController:CoachMarksControllerDataSource, CoachMarksControllerDel
     }
     
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
-//表示するスポットライトの数。チュートリアルの数。
         return 1
     }
 
     func coachMarksController(_ coachMarksController: CoachMarksController,
                                   coachMarkAt index: Int) -> CoachMark {
-//指し示す場所を決める。　今回はpointOfInterestすなわちButtonga指し示される
         return coachMarksController.helper.makeCoachMark(for: pointOfInterest)
     }
-
-
-//tableview　でいうreturn cellに似てるのかなってイメージ。表示するチュートリアルメッセージなどがいじれる
- 
 }
